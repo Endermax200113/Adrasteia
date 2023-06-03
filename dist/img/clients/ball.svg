@@ -1,8 +1,7 @@
 <svg
-	width="1351"
-	height="729"
 	viewBox="0 0 1351 729"
 	fill="none"
+	id="ball"
 	xmlns="http://www.w3.org/2000/svg">
 	<g filter="url(#filter0_i_0_3045)">
 		<circle cx="726" cy="726" r="726" fill="#CFD2DC" />

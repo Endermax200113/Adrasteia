@@ -1,1 +1,45 @@
-header.header Шапка
+-
+	let menu = [
+		{
+			name: "Главный",
+			link: "main"
+		},
+		{
+			name: "О нас",
+			link: "about"
+		},
+		{
+			name: "Услуги",
+			link: "services"
+		},
+		{
+			name: "Как мы работаем",
+			link: "work"
+		},
+		{
+			name: "Клиенты",
+			link: "clients"
+		},
+		{
+			name: "Контакты",
+			link: "contacts"
+		}
+	]
+
+header.header
+	.container.header__container
+		.header__logo
+			a.header__logo-link(href="/")
+				svg.header__logo-image
+					use(xlink:href="@img/header/logo.svg#logo")
+
+		nav.header__menu
+			ul.header__list
+				each item in menu
+					li.header__item
+						a.header__link(href="#" + item.link)=item.name
+
+		.header__app
+			button.button.header__app-button Оформить заявку
+				svg.header__app-icon
+					use(xlink:href="@img/plus.svg#plus")

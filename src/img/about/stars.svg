@@ -1,8 +1,7 @@
 <svg
-	width="248"
-	height="104"
 	viewBox="0 0 248 104"
 	fill="none"
+	id="stars"
 	xmlns="http://www.w3.org/2000/svg">
 	<g filter="url(#filter0_i_0_2921)">
 		<rect width="248" height="104" rx="52" fill="white" />
