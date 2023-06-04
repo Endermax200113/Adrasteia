@@ -23,6 +23,10 @@
 		{
 			name: "Контакты",
 			link: "contacts"
+		},
+		{
+			name: "special",
+			link: "special"
 		}
 	]
 
@@ -34,12 +38,36 @@ header.header
 					use(xlink:href="@img/header/logo.svg#logo")
 
 		nav.header__menu
-			ul.header__list
+			ul.header__list#header__list
 				each item in menu
-					li.header__item
-						a.header__link(href="#" + item.link)=item.name
+					- if (item.name !== "special")
+						li.header__item
+							a.header__link(href="#" + item.link)=item.name
+					- else
+						li.header__item.header__item--bottom
+							.chat.header__chat
+								a.chat__item(href="#") 
+									svg.chat__icon
+										use(xlink:href="@img/footer/whatsapp.svg#whatsapp")
+									span.chat__text whatsapp
+
+								a.chat__item(href="#") 
+									svg.chat__icon
+										use(xlink:href="@img/footer/telegram.svg#telegram")
+									span.chat__text telegram
+
+								a.chat__item(href="mailto:adrasteia@mail.com") 
+									span.chat__text adrasteia@mail.com
+			
+			button(type="button").button.header__menu-button.header__menu-button--disabled#header__menu-button
+				svg.header__menu-icon.header__menu-icon--show
+					use(xlink:href="@img/header/menu.svg#menu")
+				svg.header__menu-icon.header__menu-icon--hide
+					use(xlink:href="@img/header/cross.svg#cross")
 
 		.header__app
-			button.button.header__app-button Оформить заявку
+			button(type="button").button.header__app-button Оформить заявку
 				svg.header__app-icon
 					use(xlink:href="@img/plus.svg#plus")
+
+.header.header--empty

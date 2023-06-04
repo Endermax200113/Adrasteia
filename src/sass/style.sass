@@ -4,8 +4,8 @@
 
 
 body
-	background-color: #888888
-	background: url('@img/preview.jpg') 0 0 no-repeat
+	background-color: $color-white
+	font-family: $font-gilroy
 
 *
 	padding: 0
@@ -15,23 +15,310 @@ body
 	width: 1820px
 	margin: 0 auto
 
+	@media only screen and (max-width: 1919px)
+		width: 1340px
+	
+	@media only screen and (max-width: 1439px)
+		width: 1100px
+	
+	@media only screen and (max-width: 1199px)
+		width: 892px
+	
+	@media only screen and (max-width: 991px)
+		width: calc(100% - 100px)
+	
+	@media only screen and (max-width: 767px)
+		width: calc(100% - 50px)
+
+	@media only screen and (max-width: 575px)
+		width: calc(100% - 40px)
+
+.button
+	cursor: pointer
+
+.chat
+	padding: 30px 40px
+	gap: 20px
+	border: 1px solid $color-dark-gray
+	border-radius: 100px
+	display: flex
+
+	&__item
+		display: flex
+		align-items: center
+		text-decoration-line: none
+
+	&__icon
+		width: 26px
+		height: 26px
+		margin-right: 24px
+
+	&__text
+		font-weight: 700
+		font-size: 34px
+		line-height: 100%
+		letter-spacing: -0.03em
+		text-transform: lowercase
+		color: $color-dark-blue
+
+		&:hover
+			color: $color-dark-blue-hover
+			text-decoration-line: underline
+			text-decoration-skip-ink: none
+
 .header
+	position: fixed
+	width: 100%
 	padding: 37px 0px
+	border-bottom: 1px solid rgba($color-dark-blue, 0.2)
+	background-color: $color-white
+	z-index: 9999
+
+	@media only screen and (max-width: 1439px)
+		padding: 30px 0px
+	
+	@media only screen and (max-width: 1199px)
+		padding: 20px 0px
+	
+	@media only screen and (max-width: 991px)
+		padding: 19px 0px
+		border-bottom: 0
+
+		&::after
+			position: absolute
+			content: ''
+			bottom: 0px
+			width: calc(100% - 100px)
+			height: 1px
+			left: 50px
+			right: 50px
+			background-color: rgba($color-dark-blue, 0.2)
+
+	@media only screen and (max-width: 767px)
+		&::after
+			width: calc(100% - 50px)
+			left: 25px
+			right: 25px
+
+	@media only screen and (max-width: 575px)
+		&::after
+			width: calc(100% - 40px)
+			left: 20px
+			right: 20px
+
+	&--empty
+		height: 110px
+		padding: 0px
+		border: 0px
+		opacity: 0
+		z-index: -1
+
+		@media only screen and (max-width: 1439px)
+			height: 89px
+		
+		@media only screen and (max-width: 1199px)
+			height: 61px
+		
+		@media only screen and (max-width: 991px)
+			height: 57px
 
 	&__container
+		position: relative
 		display: flex
 		justify-content: space-between
 		align-items: center
-	
+			
 	&__logo
 		width: 243px
 		height: 33px
+		z-index: 2
+		
+		@media only screen and (max-width: 1439px)
+			width: 185px
+			height: 28px
+		
+		@media only screen and (max-width: 1199px)
+			width: 132px
+			height: 19px
 
 		&-link
 			display: block
-			width: 243px
-			height: 33px
+			width: 100%
+			height: 100%
 		
 		&-image
-			width: 243px
-			height: 33px
+			width: 100%
+			height: 100%
+	
+	&__menu
+		position: absolute
+		width: 100%
+		display: flex
+		justify-content: center
+		z-index: 1
+
+		@media only screen and (max-width: 991px)
+			position: relative
+			width: 30px
+			align-items: center
+
+		&-button
+			display: none
+
+			@media only screen and (max-width: 991px)
+				position: absolute
+				right: 0
+				width: 30px
+				height: 30px
+				border: 0
+				outline: 0
+				background-color: transparent
+				display: flex
+				justify-content: center
+				align-items: center
+
+			&--disabled > .header__menu-icon--show
+				display: block
+			
+			&--enabled > .header__menu-icon--hide
+				display: block
+
+		&-icon
+			display: none
+
+			@media only screen and (max-width: 991px)
+				position: absolute
+				width: 20px
+				height: 20px
+
+	&__list
+		list-style: none
+		display: flex
+
+		@media only screen and (max-width: 991px)
+			display: none
+
+			&--show
+				position: absolute
+				left: calc(-100vw + 80px)
+				top: 28px
+				width: 100vw
+				height: calc(100vh - 57px)
+				background-color: $color-white
+				display: flex
+				flex-direction: column
+				justify-content: center
+				align-items: center
+		
+		@media only screen and (max-width: 767px)
+			&--show
+				left: calc(-100vw + 55px)
+		
+		@media only screen and (max-width: 767px)
+			&--show
+				left: calc(-100vw + 50px)
+
+	&__item
+		margin-right: 32px
+
+		&--bottom
+			display: none
+
+		@media only screen and (max-width: 1439px)
+			margin-right: 20px
+		
+		@media only screen and (max-width: 991px)
+			width: 231px
+			margin-right: 0px
+			margin-bottom: 20px
+
+			&:last-child
+				margin-bottom: 0px
+
+			&--bottom
+				position: absolute
+				display: block
+				bottom: 20px
+				width: auto
+
+		&:last-child
+			margin-right: 0px
+
+	&__link
+		font-family: $font-gilroy
+		font-weight: 600
+		font-size: 20px
+		line-height: 100%
+		letter-spacing: -0.03em
+		color: $color-dark-blue
+		text-decoration-line: none
+
+		@media only screen and (max-width: 1439px)
+			font-size: 17px
+			
+		@media only screen and (max-width: 1199px)
+			font-size: 15px
+
+		@media only screen and (max-width: 991px)
+			font-size: 30px
+			font-weight: 300
+	
+	&__app
+		z-index: 3
+		
+		@media only screen and (max-width: 991px)
+			display: none
+
+		&-button
+			background-color: transparent
+			border: 0
+			outline: 0
+			font-family: $font-gilroy
+			font-weight: 600
+			font-size: 20px
+			line-height: 100%
+			letter-spacing: -0.03em
+			color: $color-dark-blue
+			fill: $color-dark-blue
+			display: flex
+			align-items: center
+
+			@media only screen and (max-width: 1439px)
+				font-size: 17px
+				
+			@media only screen and (max-width: 1199px)
+				font-size: 15px
+
+			&:hover
+				color: $color-dark-blue-hover
+				fill: $color-dark-blue-hover
+			
+		&-icon
+			width: 34px
+			height: 34px
+			margin-left: 12px
+
+			@media only screen and (max-width: 1439px)
+				width: 24px
+				height: 24px
+			
+			@media only screen and (max-width: 1199px)
+				width: 20px
+				height: 20px
+	
+	&__chat
+		padding: 17px 21px
+		gap: 15px
+
+		@media only screen and (max-width: 479px)
+			padding: 15px 10px
+			gap: 10px
+
+		& > .chat__item
+			& > .chat__icon
+				width: 18px
+				height: 18px
+				margin-right: 10px
+			
+			& > .chat__text
+				font-size: 12px

@@ -1,6 +1,5 @@
 import * as flsFunctions from './modules/functions.js';
-import $ from 'jquery';
+import * as header from './modules/header.js';
 
 flsFunctions.isWebp();
-
-$('body').addClass('test');
+header.toggleMenu();
