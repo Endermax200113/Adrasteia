@@ -52,7 +52,41 @@
       </div>
     </header>
     <div class="header header--empty"></div>
-    <main class="main"></main>
+    <main class="m">
+      <sec class="main" id="main">
+        <div class="main__background">
+          <svg class="main__background-image">
+            <use xlink:href="/img/main/preview.svg#preview"></use>
+          </svg>
+        </div>
+        <div class="container main__container">
+          <div class="main__content">
+            <div class="main__info">
+              <h1 class="title main__title">Детективно-информационное <span class="title main__title main__title--light">агентство</span></h1>
+              <p class="description main__description">Владеешь информацией - владеешь миром</p>
+              <button class="button main__button" id="main__button" type="button">Оформить заявку
+                <svg class="main__button-icon">
+                  <use xlink:href="/img/plus.svg#plus"></use>
+                </svg>
+              </button>
+              <button class="button main__button main__button-circle" id="main__button-down" type="button">
+                <svg class="main__button-icon main__button-icon-down">
+                  <use xlink:href="/img/arrow-down.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="main__right">
+              <div class="chat main__chat"><a class="chat__item" href="#">
+                  <svg class="chat__icon">
+                    <use xlink:href="/img/footer/whatsapp.svg#whatsapp"></use>
+                  </svg><span class="chat__text">открыть чат</span></a>
+                <div class="chat__separator"></div><a class="chat__item" href="mailto:adrasteia@mail.com"><span class="chat__text">adrasteia@mail.com</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sec>
+    </main>
     <footer class="footer"></footer>
     <script src="/js/app.min.js"> </script>
   </body>

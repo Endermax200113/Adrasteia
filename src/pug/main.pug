@@ -1,0 +1,29 @@
+sec.main#main
+	.main__background
+		svg.main__background-image
+			use(xlink:href="@img/main/preview.svg#preview")
+	
+	.container.main__container
+		.main__content
+			.main__info
+				h1.title.main__title Детективно-информационное 
+					span.title.main__title.main__title--light агентство
+				p.description.main__description Владеешь информацией - владеешь миром
+				button.button.main__button#main__button(type="button") Оформить заявку
+					svg.main__button-icon
+						use(xlink:href="@img/plus.svg#plus")
+				button.button.main__button.main__button-circle#main__button-down(type="button")
+					svg.main__button-icon.main__button-icon-down
+						use(xlink:href="@img/arrow-down.svg#arrow-down")
+
+			.main__right
+				.chat.main__chat
+					a.chat__item(href="#")
+						svg.chat__icon
+							use(xlink:href="@img/footer/whatsapp.svg#whatsapp")
+						span.chat__text открыть чат
+
+					.chat__separator
+
+					a.chat__item(href="mailto:adrasteia@mail.com")
+						span.chat__text adrasteia@mail.com
