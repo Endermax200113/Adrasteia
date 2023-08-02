@@ -1,0 +1,76 @@
+section.about#about
+	.container
+		h2.title.about__title Кто мы?
+		p.description.about__description О нас не пишут рейтинговые агентства и поисковые системы
+		
+		.consequence
+			.consequence__list
+				.consequence__item 
+					.consequence-note
+						.consequence-note__top
+							.consequence-note__top-left
+								svg.consequence-note__icon.consequence-note__icon--title
+									use(xlink:href="@img/about/note-clip.svg#note-clip")
+								span.consequence-note__title заметка
+
+							.consequence-note__top-right
+								svg.consequence-note__icon
+									use(xlink:href="@img/about/note-edit.svg#note-edit")
+								svg.consequence-note__icon
+									use(xlink:href="@img/about/note-cross.svg#note-cross")
+
+						.consequence-note__main
+							.consequence__text.consequence-note__main-text
+								span.consequence__num 1. 
+								| Работаем только по рекомендации от "своих"
+
+							svg.consequence-note__main-img
+								use(xlink:href="@img/about/note-ellipse.svg#note-ellipse")
+							svg.consequence-note__main-icon
+								use(xlink:href="@img/about/note-boil.svg#note-boil")
+				
+				.consequence__item
+					.consequence-people
+						.consequence-people__photo
+							.consequence-people__photo-wrap
+								svg.consequence-people__photo-img
+									use(xlink:href="@img/about/people.svg#people")
+					
+					.consequence__text.consequence-people__text
+						span.consequence__num 2. 
+						| Применяем агентскую сеть по всему миру
+				
+				.consequence__item
+					.consequence__text.consequence-record__text
+						span.consequence__num 3. 
+						| Используем арсенал профессиональных технических средств
+
+					.consequence-record
+						.consequence-record__voice
+							.consequence-record__voice-photo
+								svg.consequence-record__voice-photo-img
+									use(xlink:href="@img/about/technical-photo.svg#technical-photo")
+							
+							.consequence-record__voice-listen
+								svg.consequence-record__voice-listen-img
+									use(xlink:href="@img/about/technical-voice.svg#technical-voice")
+				
+				.consequence__item
+					.consequence-reputation
+						.consequence-reputation__stars
+							svg.consequence-reputation__stars-img
+								use(xlink:href="@img/about/stars.svg#stars")
+					
+					.consequence__text.consequence-reputation__text
+						span.consequence__num 4. 
+						| Считаем что репутация важнее денег
+
+			.consequence__threads
+				.consequence-lines
+					- for (let i = 0; i < 3; i++)
+						.consequence-lines__line
+				
+				.consequence-bobbins
+					- for (let i = 0; i < 4; i++)
+						svg.consequence-bobbins__bobbin
+							use(xlink:href="@img/about/bobbin.svg#bobbin")

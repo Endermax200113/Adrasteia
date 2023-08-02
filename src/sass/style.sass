@@ -72,7 +72,7 @@ body
 		background-color: $color-dim-gray
 
 .title
-	font-weight: 400
+	font-weight: 500
 	font-size: 94px
 	line-height: 100%
 	letter-spacing: -0.04em
@@ -125,8 +125,9 @@ body
 			left: 20px
 			right: 20px
 
-	&--empty
+	&-empty
 		position: relative
+		width: 100%
 		height: 110px
 		padding: 0px
 		border: 0px
@@ -597,7 +598,7 @@ body
 		
 		&-circle
 			position: absolute
-			bottom: 20px
+			bottom: 0px
 			padding: 15px
 			border-radius: 50%
 			background-color: $color-light-gray
@@ -654,3 +655,263 @@ body
 			
 			@media only screen and (max-width: 1199px)
 				height: 22px
+
+.about
+	margin-top: 150px
+
+	&__title
+		margin-bottom: 12px
+		text-align: center
+	
+	&__description
+		width: 495px
+		margin: 0 auto 100px
+		text-align: center
+	
+.consequence
+	position: relative
+
+	&__list
+		position: relative
+		width: 100%
+		z-index: 1
+	
+	&__item
+		position: absolute
+
+		&:nth-child(1)
+			top: 40px
+			left: 61px
+		
+		&:nth-child(2)
+			top: 34px
+			left: 602px
+		
+		&:nth-child(3)
+			top: 16px
+			left: 1018px
+		
+		&:nth-child(4)
+			top: 98px
+			left: 1507px
+
+	&-note
+		width: 454px
+		height: 293px
+		border-radius: 22px
+		background-color: $color-light-gray
+		transform: rotate(-12deg)
+
+		&__top
+			width: calc(100% - 32px)
+			padding: 16px
+			border-bottom: 1px solid $color-dim-gray
+			display: flex
+			justify-content: space-between
+			align-items: center
+			opacity: 0.44
+
+			&-left
+				display: flex
+				justify-content: space-between
+				align-items: center
+				
+		&__title
+			margin-left: 12px
+			font-size: 24px
+			line-height: 100%
+			letter-spacing: -0.04em
+			color: $color-dark-blue
+	
+		&__icon
+			width: 24px
+			height: 24px
+			margin: 0 16px
+
+			&:first-child
+				margin-left: 0px
+			
+			&:last-child, &--title
+				margin-right: 0px
+		
+		&__main
+			position: relative
+			height: 231px
+			width: 100%
+
+			&-text
+				position: absolute
+				top: 22px
+				left: 31px
+				width: 285px
+				z-index: 3
+			
+			&-img
+				position: absolute
+				top: 52.5px
+				left: 42px
+				width: 190px
+				height: 126px
+				transform: rotate(12deg)
+			
+			&-icon
+				position: absolute
+				right: 16px
+				bottom: 16px
+				width: 24px
+				height: 24px
+
+	&__text
+		font-size: 34px
+		font-weight: 500
+		line-height: 100%
+		letter-spacing: -0.04em
+		color: $color-dark-blue
+	
+	&__num
+		color: $color-light-blue
+	
+	&-people
+		position: absolute
+		z-index: 1
+
+		&__photo
+			position: absolute
+			width: 320px
+			height: 380px
+			border: 1px solid $color-light-blue
+			border-radius: 12px
+			background-color: $color-white
+			transform: rotate(16.96deg)
+
+			&-wrap
+				position: absolute
+				top: 22px
+				left: 17px
+				width: 285px
+				height: 278px
+				border: 1px solid $color-light-blue
+				border-radius: 12px
+				overflow: hidden
+			
+			&-img
+				position: absolute
+				top: 25px
+				left: 5px
+				width: 384px
+				height: 587px
+				transform: rotate(-16.96deg)
+		
+		&__text
+			position: absolute
+			top: 350px
+			left: -30px
+			width: 236px
+			z-index: 2
+	
+	&-record
+		position: absolute
+		top: 239px
+
+		&__text
+			position: absolute
+			left: 72px
+			width: 345px
+
+		&__voice
+			position: relative
+
+			&-photo, &-listen
+				position: absolute
+			
+			&-photo
+				left: 317px
+				width: 76px
+				height: 76px
+
+				&-img
+					width: 100%
+					height: 100%
+			
+			&-listen
+				top: 7px
+				left: 9px
+				width: 385px
+				height: 207px
+
+				&-img
+					width: 100%
+					height: 100%
+	
+	&-reputation
+		position: absolute
+
+		&__stars
+			position: relative
+
+			&-img
+				position: absolute
+				width: 248px
+				height: 104px
+		
+		&__text
+			position: absolute
+			top: 128px
+			left: 38px
+			width: 218px
+	
+	&__threads
+		position: absolute
+		z-index: 2
+	
+	&-lines
+		position: absolute
+		z-index: 1
+
+		&__line
+			position: absolute
+			height: 1px
+			background-color: $color-dark-blue
+
+			&:nth-child(1)
+				width: 630px
+				top: 56px
+				left: 242px
+				transform: rotate(1.35deg)
+
+			&:nth-child(2)
+				width: 394px
+				top: 145px
+				left: 854px
+				transform: rotate(24.4deg)
+			
+			&:nth-child(3)
+				width: 321px
+				left: 1220px
+				top: 164px
+				transform: rotate(-22deg)
+	
+	&-bobbins
+		position: absolute
+		z-index: 2
+
+		&__bobbin
+			position: absolute
+			width: 40px
+			height: 50px
+
+			&:nth-child(1)
+				top: 4px
+				left: 231px
+
+			&:nth-child(2)
+				top: 19px
+				left: 863px
+				
+			&:nth-child(3)
+				top: 181px
+				left: 1220px
+
+			&:nth-child(4)
+				top: 60px
+				left: 1521px
