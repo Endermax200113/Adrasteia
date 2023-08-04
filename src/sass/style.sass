@@ -78,12 +78,42 @@ body
 	letter-spacing: -0.04em
 	color: $color-dark-blue
 
+	@media only screen and (max-width: 1919px)
+		font-size: 80px
+	
+	@media only screen and (max-width: 1439px)
+		font-size: 70px
+
+	@media only screen and (max-width: 1199px)
+		font-size: 60px
+	
+	@media only screen and (max-width: 991px)
+		font-size: 50px
+	
+	@media only screen and (max-width: 767px)
+		font-size: 40px
+
 .description
 	font-weight: 400
 	font-size: 34px
 	line-height: 120%
 	letter-spacing: -0.03em
 	color: $color-light-blue
+
+	@media only screen and (max-width: 1919px)
+		font-size: 28px
+	
+	@media only screen and (max-width: 1439px)
+		font-size: 25px
+	
+	@media only screen and (max-width: 1199px)
+		font-size: 20px
+
+	@media only screen and (max-width: 991px)
+		font-size: 17px
+	
+	@media only screen and (max-width: 767px)
+		font-size: 14px
 
 .header
 	position: fixed
@@ -350,6 +380,7 @@ body
 	width: 100%
 	height: 838px
 	margin-top: 30px
+	z-index: 2
 
 	@media only screen and (max-width: 1919px)
 		height: 680px
@@ -374,7 +405,7 @@ body
 	&__background
 		position: absolute
 		overflow: hidden
-		width: 100vw
+		width: 100%
 		height: 100%
 		z-index: 1
 
@@ -416,10 +447,10 @@ body
 				right: calc(-203px + ((100vw - 375px) / 2))
 			
 			@media only screen and (max-width: 479px)
-				width: 576px
-				height: 335px
-				top: 110px
-				right: calc(-177px + ((100vw - 320px) / 2))
+				width: 655px
+				height: 415px
+				top: 97px
+				right: calc(-229px + ((100vw - 320px) / 2))
 	
 	&__container
 		position: relative
@@ -452,9 +483,6 @@ body
 		
 		@media only screen and (max-width: 767px)
 			position: static
-		
-		@media only screen and (max-width: 479px)
-			width: 275px
 
 	&__title
 		font-weight: 500
@@ -478,9 +506,9 @@ body
 		
 		@media only screen and (max-width: 991px)
 			font-size: 40px
-		
-		@media only screen and (max-width: 479px)
-			font-size: 35px
+
+		@media only screen and (max-width: 375px)
+			font-size: 10.67vw
 	
 	&__description
 		font-size: 24px
@@ -499,9 +527,14 @@ body
 		
 		@media only screen and (max-width: 991px)
 			width: 180px
+			letter-spacing: -0.065em
 		
 		@media only screen and (max-width: 767px)
 			margin: 0
+
+		@media only screen and (max-width: 375px)
+			width: 48vw
+			font-size: 4vw
 	
 	&__button
 		padding: 24px
@@ -539,18 +572,19 @@ body
 		
 		@media only screen and (max-width: 767px)
 			position: absolute
-			bottom: 20px
-			left: calc((100vw - 480px) / 2)
+			bottom: 44px
+			left: calc((100% - 440px) / 2)
 			width: 100%
 			max-width: 440px
-			padding: 24px 10px
+			padding: 19px 17px
 			justify-content: space-between
 			font-size: 14px
 			border-radius: 12px
 		
 		@media only screen and (max-width: 479px)
-			max-width: unset
 			left: unset
+			bottom: -6px
+			max-width: unset
 
 		&:hover
 			background-color: rgba($color-dark-blue-hover, 0.06)
@@ -657,31 +691,120 @@ body
 				height: 22px
 
 .about
+	position: relative
+	height: 777px
 	margin-top: 150px
+	z-index: 1
+
+	@media only screen and (max-width: 1919px)
+		height: 591px
+		margin-top: 125px
+	
+	@media only screen and (max-width: 1439px)
+		height: 490px
+		margin-top: 100px
+
+	@media only screen and (max-width: 1199px)
+		height: 405px
+		margin-top: 80px
+	
+	@media only screen and (max-width: 991px)
+		height: unset
+		margin-top: 60px
+	
+	@media only screen and (max-width: 767px)
+		margin-top: 45px
+	
+	@media only screen and (max-width: 479px)
+		margin-top: 53px
 
 	&__title
 		margin-bottom: 12px
 		text-align: center
 	
+		@media only screen and (max-width: 575px)
+			margin-bottom: 17px
+			font-size: 40px
+			text-align: left
+	
 	&__description
 		width: 495px
 		margin: 0 auto 100px
 		text-align: center
+
+		@media only screen and (max-width: 1919px)
+			width: 420px
+			margin-bottom: 70px
+		
+		@media only screen and (max-width: 1439px)
+			margin-bottom: 55px
+		
+		@media only screen and (max-width: 1199px)
+			width: 300px
+		
+		@media only screen and (max-width: 991px)
+			width: 250px
+			margin-bottom: 40px
+		
+		@media only screen and (max-width: 767px)
+			width: 200px
+			margin-bottom: 30px
+		
+		@media only screen and (max-width: 575px)
+			width: 250px
+			margin: 0 0 30px
+			font-size: 14px
+			line-height: 100%
+			text-align: left
 	
 .consequence
 	position: relative
+
+	@media only screen and (max-width: 1919px)
+		left: -177px
+		transform: scale(0.74)
+
+	@media only screen and (max-width: 1439px)
+		left: -218px
+		transform: scale(0.60)
+	
+	@media only screen and (max-width: 1199px)
+		left: -227px
+		transform: scale(0.49)
+	
+	@media only screen and (max-width: 991px)
+		left: 0px
+		transform: scale(1)
 
 	&__list
 		position: relative
 		width: 100%
 		z-index: 1
+
+		@media only screen and (max-width: 991px)
+			display: grid
+			grid-template-columns: 1fr 1fr
+			gap: 11px
+		
+		@media only screen and (max-width: 575px)
+			grid-template-columns: 1fr
 	
 	&__item
 		position: absolute
 
+		@media only screen and (max-width: 991px)
+			position: relative
+			height: 150px
+			border-radius: 10px
+			background-color: $color-dim-white
+
 		&:nth-child(1)
 			top: 40px
 			left: 61px
+
+			@media only screen and (max-width: 991px)
+				border-radius: unset
+				background-color: unset
 		
 		&:nth-child(2)
 			top: 34px
@@ -694,6 +817,12 @@ body
 		&:nth-child(4)
 			top: 98px
 			left: 1507px
+			
+		@media only screen and (max-width: 991px)
+			@for $i from 1 through 4
+				&:nth-child(#{$i})
+					top: unset
+					left: unset
 
 	&-note
 		width: 454px
@@ -701,6 +830,13 @@ body
 		border-radius: 22px
 		background-color: $color-light-gray
 		transform: rotate(-12deg)
+
+		@media only screen and (max-width: 991px)
+			width: unset
+			height: 100%
+			border-radius: 10px
+			background-color: $color-dim-white
+			transform: rotate(0deg)
 
 		&__top
 			width: calc(100% - 32px)
@@ -710,6 +846,18 @@ body
 			justify-content: space-between
 			align-items: center
 			opacity: 0.44
+
+			@media only screen and (max-width: 991px)
+				width: calc(100% - 14px)
+				height: 21px
+				padding: 5px 7px
+				opacity: 1
+
+				&-right
+					position: relative
+					width: 60px
+					height: 21px
+					flex-basis: 60px
 
 			&-left
 				display: flex
@@ -722,14 +870,42 @@ body
 			line-height: 100%
 			letter-spacing: -0.04em
 			color: $color-dark-blue
+
+			@media only screen and (max-width: 991px)
+				margin-left: 7px
+				font-size: 12px
+				text-transform: capitalize
 	
 		&__icon
 			width: 24px
 			height: 24px
 			margin: 0 16px
 
+			@media only screen and (max-width: 991px)
+				width: 20px
+				height: 20px
+				margin: 0 10px
+
+				&--edit
+					position: absolute
+					top: 1px
+					width: 21px
+					height: 21px
+					margin-right: unset
+
+				&--cross
+					position: absolute
+					top: 4px
+					left: 45px
+					width: 15px
+					height: 15px
+					margin-left: unset
+
 			&:first-child
 				margin-left: 0px
+				
+				@media only screen and (max-width: 991px)
+					transform: rotate(12deg)
 			
 			&:last-child, &--title
 				margin-right: 0px
@@ -739,12 +915,20 @@ body
 			height: 231px
 			width: 100%
 
+			@media only screen and (max-width: 991px)
+				height: 117px
+
 			&-text
 				position: absolute
 				top: 22px
 				left: 31px
 				width: 285px
 				z-index: 3
+
+				@media only screen and (max-width: 991px)
+					top: 20px
+					left: 20px
+					width: 145px
 			
 			&-img
 				position: absolute
@@ -753,6 +937,12 @@ body
 				width: 190px
 				height: 126px
 				transform: rotate(12deg)
+
+				@media only screen and (max-width: 991px)
+					top: 18px
+					left: 32px
+					width: 169px
+					height: 102px
 			
 			&-icon
 				position: absolute
@@ -761,15 +951,31 @@ body
 				width: 24px
 				height: 24px
 
+				@media only screen and (max-width: 991px)
+					right: 3px
+					bottom: 3px
+					width: 30px
+					height: 30px
+					transform: rotate(12deg)
+
 	&__text
 		font-size: 34px
 		font-weight: 500
 		line-height: 100%
 		letter-spacing: -0.04em
 		color: $color-dark-blue
+
+		@media only screen and (max-width: 991px)
+			font-size: 17px
+			font-weight: 400
+			line-height: 120%
+			letter-spacing: -0.34px
 	
 	&__num
 		color: $color-light-blue
+
+		@media only screen and (max-width: 991px)
+			display: none
 	
 	&-people
 		position: absolute
@@ -784,6 +990,13 @@ body
 			background-color: $color-white
 			transform: rotate(16.96deg)
 
+			@media only screen and (max-width: 991px)
+				top: 17px
+				left: 20px
+				width: 96px
+				height: 115px
+				transform: unset
+
 			&-wrap
 				position: absolute
 				top: 22px
@@ -793,6 +1006,13 @@ body
 				border: 1px solid $color-light-blue
 				border-radius: 12px
 				overflow: hidden
+
+				@media only screen and (max-width: 991px)
+					top: 6px
+					left: 4px
+					width: 85px
+					height: 83px
+					border-radius: 5px
 			
 			&-img
 				position: absolute
@@ -801,6 +1021,13 @@ body
 				width: 384px
 				height: 587px
 				transform: rotate(-16.96deg)
+
+				@media only screen and (max-width: 991px)
+					top: 7px
+					left: -47px
+					width: 179px
+					height: 179px
+					transform: rotate(-1.963deg)
 		
 		&__text
 			position: absolute
@@ -808,18 +1035,51 @@ body
 			left: -30px
 			width: 236px
 			z-index: 2
+		
+			@media only screen and (max-width: 991px)
+				top: 45px
+				left: unset
+				right: calc(-28px + ((50vw - 265px) / 2))
+				width: 140px
+
+			@media only screen and (max-width: 575px)
+				right: calc(-28px + ((100vw - 265px) / 2))
 	
 	&-record
 		position: absolute
 		top: 239px
+
+		@media only screen and (max-width: 991px)
+			top: 42px
+			right: calc(-30px + ((50vw - 265px) / 2))
+
+		@media only screen and (max-width: 767px)
+			right: calc(-7px + ((50vw - 265px) / 2))
+			max-width: 115px
+			min-width: 83px
+			min-height: 64px
+			width: calc(100% - 210px)
+
+		@media only screen and (max-width: 575px)
+			right: calc(-7.4% + ((100vw - 265px) / 2))
 
 		&__text
 			position: absolute
 			left: 72px
 			width: 345px
 
+			@media only screen and (max-width: 991px)
+				left: 20px
+				top: 31px
+				width: 155px
+				line-height: 100%
+				letter-spacing: -0.68px
+
 		&__voice
 			position: relative
+
+			@media only screen and (max-width: 767px)
+				width: 100%
 
 			&-photo, &-listen
 				position: absolute
@@ -828,6 +1088,9 @@ body
 				left: 317px
 				width: 76px
 				height: 76px
+
+				@media only screen and (max-width: 991px)
+					display: none
 
 				&-img
 					width: 100%
@@ -839,12 +1102,24 @@ body
 				width: 385px
 				height: 207px
 
+				@media only screen and (max-width: 991px)
+					position: static
+					width: 115px
+					height: 64px
+
+				@media only screen and (max-width: 767px)
+					width: 100%
+
 				&-img
 					width: 100%
 					height: 100%
 	
 	&-reputation
 		position: absolute
+		
+		@media only screen and (max-width: 991px)
+			top: 40px
+			left: 12px
 
 		&__stars
 			position: relative
@@ -853,16 +1128,43 @@ body
 				position: absolute
 				width: 248px
 				height: 104px
+
+				@media only screen and (max-width: 991px)
+					width: 138px
+					height: 65px
+				
+				@media only screen and (max-width: 767px)
+					width: 113px
+				
+				@media only screen and (max-width: 575px)
+					width: 138px
 		
 		&__text
 			position: absolute
 			top: 128px
 			left: 38px
 			width: 218px
+
+			@media only screen and (max-width: 991px)
+				top: 43px
+				left: unset
+				right: calc(2px + ((50vw - 265px) / 2))
+				width: 110px
+				letter-spacing: -0.51px
+			
+			@media only screen and (max-width: 575px)
+				right: calc(2px + ((100vw - 265px) / 2))
+			
+			@media only screen and (max-width: 375px)
+				right: 0px
+				left: 168px
 	
 	&__threads
 		position: absolute
 		z-index: 2
+
+		@media only screen and (max-width: 991px)
+			display: none
 	
 	&-lines
 		position: absolute
